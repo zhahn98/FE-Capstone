@@ -1,0 +1,41 @@
+/* eslint-disable object-curly-newline */
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Link from 'next/link';
+import { deleteSinglePark } from '../api/parkData';
+
+export default function DisplayParkCard({ parkObj, onUpdate }) {
+  const deleteThisPark = () => {
+    if (window.confirm(`Delete ${parkObj.park_name}?`)) {
+      deleteSinglePark(parkObj.firebaseKey).then(() => onUpdate());
+    }
+  };
+
+  return (
+    <Card border="light" style={{ width: '18rem', margin: '10px', color: 'white', backgroundColor: '#4a6630' }}>
+      <Card.Img variant="top" src={parkObj.image} alt={parkObj.park_name} style={{ height: '300px' }} />
+      <h2>{parkObj.park_name}</h2>
+      <h5>{parkObj.park_state}</h5>
+      <Link href={`/park/${parkObj.firebaseKey}`} passHref>
+        <Button variant="success" className="m-2">Details</Button>
+      </Link>
+      <Button variant="danger" onClick={deleteThisPark} className="m-2">Delete
+      </Button>
+      <Link href={`/park/edit/${parkObj.firebaseKey}`} passHref>
+        <Button className="m-2">Edit</Button>
+      </Link>
+    </Card>
+  );
+}
+
+DisplayParkCard.propTypes = {
+  parkObj: PropTypes.shape({
+    park_name: PropTypes.string,
+    park_state: PropTypes.string,
+    image: PropTypes.string,
+    firebaseKey: PropTypes.string,
+  }).isRequired,
+  onUpdate: PropTypes.func.isRequired,
+};

@@ -1,0 +1,20 @@
+{
+  "reviews": {
+    "-Na9X8Vs-9ChJh2QSPwZ": {
+      "firebaseKey": "-Na9X8Vs-9ChJh2QSPwZ",
+      "title": "Wow epic 5/5!",
+      "body": "This was a really good park to go to",
+      "rating": 5,
+      "image": "IMGLINK",
+      "uid": "TKp6FPSQCTYepUCYIeHHrzfTkzw1"
+    },
+    "-Na9X8Vs-9ChJh2QSPwY": {
+      "firebaseKey": "-Na9X8Vs-9ChJh2QSPwY",
+      "title": "WHOA epic 6/5!",
+      "body": "This was AN AWESOME park to go to",
+      "rating": 6,
+      "image": "IMGLINK",
+      "uid": "TKp6FPSQCTYepUCYIeHHrzfTkzw1"
+    }
+  }
+}

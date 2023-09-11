@@ -18,5 +18,14 @@ a {
 }
 
 body {
-  background-color: #88effd;
+  height: 1800px;
+  background-color: #103c1d;
+  background-image: url("../components/images/forestBG.png");
+  background-size: cover;
+
+}
+
+h5, h4, h3, h2, h1, p {
+  color: white;
+  text-shadow: 0 0 3px #000000, 0 0 5px #000000;
 }
