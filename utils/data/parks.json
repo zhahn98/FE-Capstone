@@ -1,0 +1,20 @@
+{
+  "parks": {
+    "-Na9X8Vs-9ChJh2QSPwX": {
+      "firebaseKey": "-Na9X8Vs-9ChJh2QSPwX",
+      "park_name": "Fun Park",
+      "image": "IMGLINK",
+      "park_state": "TN",
+      "fav": false,
+      "uid": "TKp6FPSQCTYepUCYIeHHrzfTkzw1"
+    },
+    "-Na9X8Vs-9ChJh2QSPwZ": {
+      "firebaseKey": "-Na9X8Vs-9ChJh2QSPwZ",
+      "park_name": "More Fun Park",
+      "image": "IMGLINK",
+      "park_state": "NY",
+      "fav": false,
+      "uid": "TKp6FPSQCTYepUCYIeHHrzfTkzw1"
+    }
+  }
+}
