@@ -23,7 +23,7 @@ export default function NavBar() {
             <Link passHref href="/review/reviews">
               <Nav.Link>Reviews</Nav.Link>
             </Link>
-            <Link passHref href="/">
+            <Link passHref href="/favorite/favorites">
               <Nav.Link>View Favorites</Nav.Link>
             </Link>
           </Nav>

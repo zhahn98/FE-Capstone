@@ -15,8 +15,9 @@ const getReviews = () => new Promise((resolve, reject) => {
     .catch(reject);
 });
 
+// get reviews for selected park
 const getParkReviews = (selectedParkId) => new Promise((resolve, reject) => {
-  fetch(`${endpoint}/reviews.json?orderBy="park_id"&equalTo="${selectedParkId}`, {
+  fetch(`${endpoint}/reviews.json?orderBy="park_id"&equalTo="${selectedParkId}"`, {
     method: 'GET',
     headers: {
       'Content-Type': 'application/json',

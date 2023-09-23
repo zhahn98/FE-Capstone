@@ -4,6 +4,8 @@ import { useAuth } from '../utils/context/authContext';
 import DisplayHomeExplore from '../components/HomeExploreCard';
 import DisplayHomeReviews from '../components/HomeReviewCard';
 import DisplayHomeFavorites from '../components/HomeFavoritesCard';
+import DisplayCredits from '../components/Credits';
+import ScrollArrow from '../components/Scroll';
 
 function Home() {
   const { user } = useAuth();
@@ -21,7 +23,7 @@ function Home() {
     >
       <h2>Hello {user.displayName}! </h2>
       <h1>Welcome to Rooted Ratings!</h1>
-      <br />
+      <hr />
       <br />
       {/* <Button variant="danger" type="button" size="lg" className="copy-btn" onClick={signOut}>
         Sign Out
@@ -33,6 +35,10 @@ function Home() {
         <DisplayHomeReviews />
         <DisplayHomeExplore />
         <DisplayHomeFavorites />
+      </div>
+      <div><ScrollArrow /></div>
+      <div className="text-center">
+        <DisplayCredits />
       </div>
     </div>
   );
