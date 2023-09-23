@@ -14,11 +14,9 @@ export default function DisplayReviewCard({ reviewObj, onUpdate }) {
       deleteSingleReview(reviewObj.firebaseKey).then(() => onUpdate());
     }
   };
-
   return (
     <Card border="light" style={{ width: '18rem', margin: '10px', color: 'white', backgroundColor: '#1e610f' }}>
       <Card.Img variant="top" src={reviewObj.reviewImg} alt={reviewObj.title} style={{ height: '300px' }} />
-      {/* <h1>{parkObj.park_name}</h1> */}
       <h2>{reviewObj.title}</h2>
       <h5>{reviewObj.textBody}</h5>
       <h5>User Rating: {reviewObj.rating}</h5>
@@ -31,16 +29,13 @@ export default function DisplayReviewCard({ reviewObj, onUpdate }) {
     </Card>
   );
 }
-
 DisplayReviewCard.propTypes = {
   // parkObj: PropTypes.shape({
   //   park_name: PropTypes.string,
-  //   park_state: PropTypes.string,
-  //   image: PropTypes.string,
-  //   firebaseKey: PropTypes.string,
   // }).isRequired,
   reviewObj: PropTypes.shape({
     title: PropTypes.string,
+    park_name: PropTypes.string,
     rating: PropTypes.number,
     textBody: PropTypes.string,
     reviewImg: PropTypes.string,

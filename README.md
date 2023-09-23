@@ -1,80 +1,66 @@
-# React/Next.js Template
+# Rooted Ratings App
 
-[See Live Demo of this Template](https://drt-next-js-template.netlify.app/)
+Rooted Ratings is a web application built using React, Next.js, and Firebase. This app allows authenticated users to find and review natural areas for some outdoor recreation. Below, you will find an overview of the app's features and instructions on how to use it.
 
-## [Team Roster Instructions](./INSTRUCTIONS.md)
+## Features
 
-## Topics
-- [Get Started](#get-started)
-- [Starting the Project](#starting-the-project)
-- [Using axios](#using-axios)
-- [Deploying on Netlify](#deploying-on-netlify)
-___
-## Getting Started
-### Use Template
-#### 1. To get started, click the GREEN "Use this Template" button at the top of the repo
-<img width="915" alt="Screen Shot 2022-07-06 at 12 54 01 PM" src="https://user-images.githubusercontent.com/29741570/177612998-4aac9237-5a1e-4f13-8ae0-468587521564.png">
+### Authentication
+- Users can sign in using Firebase Authentication.
 
-#### 2. Make sure YOUR github account is selected in the dropdown and name your project
-<img width="763" alt="Screen Shot 2022-07-06 at 12 54 48 PM" src="https://user-images.githubusercontent.com/29741570/177613126-dd38f678-7553-4f27-8a4a-75680f14d71e.png">
+### Find Parks
+- Users can view an array of all the parks in the database, in addition to being able to view a details page.
+-Users can see additional information on the details page, including Reviews from other users.
 
-#### 3. Clone your new repo to your local machine
-#### 4. Go to the **NEXT** section
+### Reviews
+-Users can read reviews associated with a specific park from the park details page. Users can also browse all reviews within the reviews page. A review can be created for any of the Parks available, where users can submit images, ratings, and important things to know.
 
-## Starting the Project
-1. Create a Firebase project and set up authentication. Use [these videos](https://vimeo.com/showcase/codetracker-firebase) as a refresher if needed.
-1. Create a `.env` file at the root of the project
-1. Copy/Paste the contents of the `.env.sample` file to your newly created `.env` file.
-1. Copy over all of your Firebase values into the `.env` file.
-1. Open the `package.json` file and change the `name` property to the name of your application, and `author` to  your name.
-1. From your command line, be in the root directory and run `npm install` OR `npm i` for short.
-1. Next, run `npm run prepare`. This command sets up husky to track eslint errors on commit that will make your deploy fail on Netlify.
-1. To start your application, run `npm run dev`. THIS IS THE COMMAND YOU WILL USE TO RUN YOUR DEVELOPMENT SERVER FROM NOW ON.
-1. Open [http://localhost:3000](http://localhost:3000) with your browser.
+### Editing and Deleting Reviews
+- Reviews can be edited and deleted by the user.
 
-### If you see this, you are set to go!
-<img width="450" alt="Screen Shot 2022-07-06 at 1 07 27 PM" src="https://user-images.githubusercontent.com/29741570/177615077-9b6a75bc-0260-4d29-bb88-bd95a3140687.png">
+### Search
+- Users have access to a dynamic searchbar that can be used to find specific Parks.
 
+### Community Favorites
+- Users can mark Parks as favorites, which are all displayed in the Favorites page.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## How to Use
 
-**NOTES:** 
-- If you see the following error, you did not follow all the setup steps correctly and failed to add your Firebase creds. Go back and do that NOW.
+1. Visit the Rooted Ratings App at [https://rootbeerrecommend.com/](https://rootbeerrecommend.com/).
 
-<img width="1043" alt="Screen Shot 2022-07-06 at 11 18 45 AM" src="https://user-images.githubusercontent.com/29741570/177612501-c2628f18-4bbd-4de9-aae6-27ffba1172d6.png">
+2. Sign in using Firebase Authentication to access the app's features.
 
-### Using Axios
-> For every file you will need to make an XHR request in, you will need to require Axios
-```js
-import axios from 'axios';
+3. Explore community parks and reviews!
 
-const examplePromise = () => {
-  axios.get('http://localhost:3001/example')
-    .then((data) => {
-      console.warn(data);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
-```
+4. Recommend your favorite parks by creating a review!
 
-### Deploying on Netlify
-Netlify will automatically detect your project and prepopulate the settings, but should something go wrong and it does not, here are the commands:
+5. Edit or delete park recommendations.
 
-- Build Command: `npm run build`
-- Publish directory: `.next`
+6. Mark your favorite parks!
 
-#### Additional Steps to Take on Netlify
-- Add Environmental Variables
-    - Any Enviromental variables you are using in your `.env` file should be added to Netlify. 
-        - Go to Site settings > Build & deploy > Environment > Environment variables and the keys and values there.
+## Video Walkthrough
+  LOOM VID HERE
 
-- Update Firebase URL Settings
-    - In Firebase under Authentication select sign in methods, scroll to Authorized domains. Add your Netlify URL.
-        
-## Learn More about Next.js
-To learn more about Next.js, take a look at the following resources:
+## Deployment
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The Root Beer Recommend App is deployed on Netlify and can be accessed at [https://rootbeerrecommend.com/](https://rootbeerrecommend.com/).
+
+## Development
+
+If you want to run the app locally or contribute to its development, follow these steps:
+
+1. Clone the repository: `git clone [repository URL]`
+
+2. Install dependencies: `npm install`
+
+3. Configure Firebase:
+   - Set up a Firebase project.
+   - Add Firebase configuration to your app.
+   - Set up Firebase Realtime Database and Authentication.
+
+4. Start the development server: `npm run dev`
+
+5. Open your browser and go to [http://localhost:3000/](http://localhost:3000/) to view the app locally.
+
+## Credits
+
+This app was created by Zack Hahn, with the help of the Nashville Software School E23 Instructional Crew.

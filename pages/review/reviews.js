@@ -26,8 +26,8 @@ function ReviewHome() {
         <Button variant="success">Add a Review</Button>
       </Link>
       <div className="d-flex flex-wrap">
-        {reviews.map((review) => (
-          <DisplayReviewCard key={review.firebaseKey} reviewObj={review} onUpdate={getAllTheReviews} />
+        {reviews.map((review, park) => (
+          <DisplayReviewCard key={review.firebaseKey} parkObj={park} reviewObj={review} onUpdate={getAllTheReviews} />
         ))}
       </div>
     </div>

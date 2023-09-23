@@ -16,7 +16,6 @@ const initialState = {
 function ReviewForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
   const [parks, setParks] = useState([]);
-  console.warn(parks);
   const router = useRouter();
   const { user } = useAuth();
 
@@ -60,7 +59,7 @@ function ReviewForm({ obj }) {
           name="park_id"
           onChange={handleChange}
           className="mb-3"
-          value={obj.park_id}
+          value={obj.park_name}
           required
         >
           <option value="">Select a Park</option>
@@ -78,7 +77,10 @@ function ReviewForm({ obj }) {
       </FloatingLabel>
 
       {/* REVIEW TITLE INPUT  */}
-      <FloatingLabel controlId="floatingInput1" label="Review Title:" className="mb-3">
+      <FloatingLabel controlId="floatingInput1" className="mb-3" />
+
+      {/* PARK SELECT  */}
+      <FloatingLabel controlId="floatingInput" label="Park name:" className="mb-3">
         <Form.Control
           type="text"
           placeholder="Enter review title:"
@@ -103,14 +105,21 @@ function ReviewForm({ obj }) {
 
       {/* RATING INPUT */}
       <FloatingLabel controlId="floatingInput2" label="Rating:" className="mb-3">
-        <Form.Control
+        <Form.Select
           type="text"
           placeholder="Enter park rating here"
           name="rating"
           value={formInput.rating}
           onChange={handleChange}
           required
-        />
+        >
+          <option value="">Select a rating</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </Form.Select>
       </FloatingLabel>
 
       {/* IMG INPUT  */}
@@ -134,6 +143,7 @@ function ReviewForm({ obj }) {
 ReviewForm.propTypes = {
   obj: PropTypes.shape({
     textBody: PropTypes.string,
+    park_name: PropTypes.string,
     rating: PropTypes.number,
     reviewImg: PropTypes.string,
     park_id: PropTypes.string,

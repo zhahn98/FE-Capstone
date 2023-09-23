@@ -18,8 +18,8 @@ a {
 }
 
 body {
-  height: 1800px;
-  background-color: #103c1d;
+  height: 1700px;
+  background-color: #000000;
   background-image: url("../components/images/forestBG.png");
   background-size: cover;
 
@@ -28,4 +28,21 @@ body {
 h5, h4, h3, h2, h1, p {
   color: white;
   text-shadow: 0 0 3px #000000, 0 0 5px #000000;
+}
+
+.creds {
+  padding: 50px;
+}
+
+.scroll-text {
+  cursor: pointer;
+}
+
+.custom-button {
+  background-color: #7bbe6e;
+  transition: background-color 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #5a8b50
 }
