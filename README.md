@@ -25,7 +25,7 @@ Rooted Ratings is a web application built using React, Next.js, and Firebase. Th
 
 ## How to Use
 
-1. Visit the Rooted Ratings App at [https://rootbeerrecommend.com/](https://rootbeerrecommend.com/).
+1. Visit the Rooted Ratings App
 
 2. Sign in using Firebase Authentication to access the app's features.
 
