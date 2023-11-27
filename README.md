@@ -38,11 +38,11 @@ Rooted Ratings is a web application built using React, Next.js, and Firebase. Th
 6. Mark your favorite parks!
 
 ## Video Walkthrough
-  LOOM VID HERE
+[loom.com/share/38a20c867f4d46bebac00dbf9d08a554]
 
 ## Deployment
 
-The Root Beer Recommend App is deployed on Netlify and can be accessed at [https://rootbeerrecommend.com/](https://rootbeerrecommend.com/).
+The Rooted Ratings App is deployed on Netlify and can be accessed at [https://app.netlify.com/sites/glistening-dolphin-7e9b2b/overview](https://app.netlify.com/sites/glistening-dolphin-7e9b2b/overview)
 
 ## Development
 
