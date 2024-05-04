@@ -5,17 +5,12 @@ import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import Link from 'next/link';
 import { useAuth } from '../utils/context/authContext';
-import { deleteSinglePark, createFavPark } from '../api/parkData';
+import { deleteSinglePark } from '../api/parkData';
 
 export default function DisplayParkCard({ parkObj, onUpdate }) {
   const deleteThisPark = () => {
     if (window.confirm(`Delete ${parkObj.park_name}?`)) {
       deleteSinglePark(parkObj.firebaseKey).then(() => onUpdate());
-    }
-  };
-  const addToFavs = () => {
-    if (window.confirm(`Add ${parkObj.park_name} to Community Favorites?`)) {
-      createFavPark(parkObj.firebaseKey).then(() => onUpdate());
     }
   };
   const { user } = useAuth();
@@ -27,11 +22,8 @@ export default function DisplayParkCard({ parkObj, onUpdate }) {
       <h5>Type: {parkObj.category}</h5>
       <h5>{parkObj.park_state}</h5>
       <Link href={`/park/${parkObj.firebaseKey}`} passHref>
-        <Button variant="success" className="m-2">Details</Button>
+        <Button variant="success" className="m-2">Reviews</Button>
       </Link>
-      <Button variant="success" onClick={addToFavs} className="m-2 custom-button">
-        &#x1f49a;
-      </Button>
       {renderParkBtns && (
       <>
         <Button variant="danger" onClick={deleteThisPark} className="m-2">Delete

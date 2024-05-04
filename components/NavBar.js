@@ -23,9 +23,6 @@ export default function NavBar() {
             <Link passHref href="/review/reviews">
               <Nav.Link>Reviews</Nav.Link>
             </Link>
-            <Link passHref href="/favorite/favorites">
-              <Nav.Link>View Favorites</Nav.Link>
-            </Link>
           </Nav>
           <Nav className="ml-auto">
             <Button className="justify-content-end" variant="success" onClick={signOut}>Sign Out</Button>
