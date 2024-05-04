@@ -3,7 +3,7 @@
 import { useAuth } from '../utils/context/authContext';
 import DisplayHomeExplore from '../components/HomeExploreCard';
 import DisplayHomeReviews from '../components/HomeReviewCard';
-import DisplayHomeFavorites from '../components/HomeFavoritesCard';
+import DisplayHomeFavorites from '../components/HomeProfileCard';
 import DisplayCredits from '../components/Credits';
 import ScrollArrow from '../components/Scroll';
 

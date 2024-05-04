@@ -46,7 +46,7 @@ export default function ScrollArrow() {
       <br />
       {showArrow && (
         <div className="scroll-arrow" onClick={scrollToBot}>
-          <p className="scroll-text">&#11015; Scroll Down</p>
+          <p className="scroll-text">&#11015; Click Me!</p>
         </div>
       )}
     </div>
