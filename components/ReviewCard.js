@@ -20,12 +20,17 @@ export default function DisplayReviewCard({ reviewObj, onUpdate }) {
       <h2>{reviewObj.title}</h2>
       <h5>{reviewObj.textBody}</h5>
       <h5>User Rating: {reviewObj.rating}</h5>
-      <h5>Submitted by: {user.displayName}</h5>
-      <Button variant="danger" onClick={deleteThisReview} className="m-2">Delete
-      </Button>
-      <Link href={`/review/edit/${reviewObj.firebaseKey}`} passHref>
-        <Button className="m-2">Edit</Button>
-      </Link>
+      {/* <h5>Submitted by: {user.displayName}</h5> */}
+      {user.uid === reviewObj.uid && (
+        <>
+          <Button variant="danger" onClick={deleteThisReview} className="m-2">
+            Delete
+          </Button>
+          <Link href={`/review/edit/${reviewObj.firebaseKey}`} passHref>
+            <Button className="m-2">Edit</Button>
+          </Link>
+        </>
+      )}
     </Card>
   );
 }
@@ -40,6 +45,7 @@ DisplayReviewCard.propTypes = {
     textBody: PropTypes.string,
     reviewImg: PropTypes.string,
     firebaseKey: PropTypes.string,
+    uid: PropTypes.string,
   }).isRequired,
   onUpdate: PropTypes.func.isRequired,
 };
