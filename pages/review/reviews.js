@@ -20,6 +20,8 @@ function ReviewHome() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  console.warn('uid:', user.uid);
+
   return (
     <div className="text-center my-4">
       <Link href="/review/new" passHref>
